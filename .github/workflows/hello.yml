@@ -13,6 +13,7 @@ jobs:
       - name: Current branch name
         run: |
           git rev-parse --abbrev-ref HEAD
+          echo "$GITHUB_REF"
 
       - name: Print files.json
         if: github.head_ref != 'master'
