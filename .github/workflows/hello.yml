@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Get difference
-        run: git log
+        run: git diff-tree --no-commit-id --name-only -r HEAD^
         
