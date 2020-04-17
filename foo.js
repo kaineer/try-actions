@@ -1,3 +1,5 @@
+// foo.js
+
 const {readFile} = require('fs');
 const {join} = require('path');
 
