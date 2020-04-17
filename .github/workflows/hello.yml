@@ -24,4 +24,4 @@ jobs:
           ls $HOME/
 
       - name: Print files.json
-        run: node $HOME/try-actions/foo.js
+        run: NODE_PATH=$PWD node $HOME/try-actions/foo.js
