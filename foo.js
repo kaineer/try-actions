@@ -1,7 +1,7 @@
 const {readFile} = require('fs');
 const {join} = require('path');
 
-readFile(join(process.env.PATH, 'files.json'), (err, buffer) => {
+readFile(join(process.env.HOME, 'files.json'), (err, buffer) => {
   if (err) {
     throw err;
   } else {
