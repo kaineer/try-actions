@@ -17,11 +17,10 @@ jobs:
           echo '${{ steps.file_changes.outputs.files_added}}'
           echo '${{ steps.file_changes.outputs.files_removed}}'
 
-      - name: tree
+      - name: Diagnostics
         run: |
           pwd
           ls -l
-          ls $HOME/
 
       - name: Print files.json
-        run: NODE_PATH=. node foo.js
+        run: NODE_PATH=$PWD node foo.js
