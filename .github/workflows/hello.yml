@@ -25,4 +25,4 @@ jobs:
           ls -l
 
       - name: Print files.json
-        run: NODE_PATH=$PWD node foo.js
+        run: node ./foo.js
