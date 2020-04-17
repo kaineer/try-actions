@@ -6,6 +6,7 @@ jobs:
     steps:
       - id: checkout
         uses: actions/checkout@v1
+
       - id: file_changes
         uses: trilom/file-changes-action@v1.2.3
 
