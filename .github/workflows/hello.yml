@@ -8,21 +8,11 @@ jobs:
         uses: actions/checkout@v1
       - id: file_changes
         uses: trilom/file-changes-action@v1.2.3
-      - name: test
-        run: |
-          cat $HOME/files.json
-          cat $HOME/files_modified.json
-          cat $HOME/files_added.json
-          cat $HOME/files_removed.json
-          echo '${{ steps.file_changes.outputs.files}}'
-          echo '${{ steps.file_changes.outputs.files_modified}}'
-          echo '${{ steps.file_changes.outputs.files_added}}'
-          echo '${{ steps.file_changes.outputs.files_removed}}'
-
-      - name: Diagnostics
-        run: |
-          pwd
-          ls -l
 
       - name: Print files.json
+        if: github.head_ref != 'master'
         run: node ./foo.js
+
+      - name: Print all files
+        if: github.head_ref == 'master'
+        run: node ./bar.js
