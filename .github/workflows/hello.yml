@@ -18,7 +18,7 @@ jobs:
           echo '${{ steps.file_changes.outputs.files_removed}}'
 
       - name: tree
-        run: tree -d
+        run: ls $HOME/
 
       - name: Print files.json
         run: node $HOME/try-actions/foo.js
